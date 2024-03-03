@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba06rhv2m578q"]
+
+[ext_resource type="Material" uid="uid://cqxfcw1wyj8o4" path="res://Assets/OceanMaterial.tres" id="1_febyj"]
+[ext_resource type="ArrayMesh" uid="uid://y8osbgb3lnt3" path="res://Assets/SeaPlane.obj" id="1_wcplk"]
+
+[node name="Ocean" type="Node3D"]
+
+[node name="SeaPlane" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_wcplk")
+surface_material_override/0 = ExtResource("1_febyj")

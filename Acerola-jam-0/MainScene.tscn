@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://daapwpj88hrw7"]
+
+[ext_resource type="PackedScene" uid="uid://cd36hcilo3fgm" path="res://Assets/Terrains/Terrain1.glb" id="1_2bxuj"]
+[ext_resource type="Material" uid="uid://jm3v077gt1qf" path="res://Assets/Terrains/Terrain1Material.tres" id="2_qwqdw"]
+[ext_resource type="PackedScene" uid="uid://ba06rhv2m578q" path="res://Assets/Ocean.tscn" id="3_u2rcm"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="Terrain1" parent="." instance=ExtResource("1_2bxuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371897, 0, 0.497039)
+
+[node name="Terrain" parent="Terrain1" index="0"]
+surface_material_override/0 = ExtResource("2_qwqdw")
+
+[node name="Ocean" parent="." instance=ExtResource("3_u2rcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+
+[editable path="Terrain1"]
